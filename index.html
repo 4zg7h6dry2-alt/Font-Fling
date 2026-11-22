@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Font Fling ♡ a dating app for typefaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@500&family=Fredoka:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- INTRO -->
+  <div class="stage" id="intro">
+    <div class="page-card">
+      <div class="slide active" data-slide="0">
+        <p class="presents line" style="--d:0"><a class="ig" href="https://www.instagram.com/witty.fig?cnvx=dXE1NmR2ZGN4eXVr&amp;utm_source=qr" target="_blank" rel="noopener">witty.fig</a><span class="pxh beat" style="font-size:2px;margin:0 8px" aria-hidden="true"></span>presents…</p>
+        <h1 class="big line" style="--d:1.2">Font Fling</h1>
+        <button class="next" style="--d:2.4">Next →</button>
+      </div>
+      <div class="slide" data-slide="1">
+        <p class="hey line" style="--d:0">Hey you.</p>
+        <p class="line" style="--d:1.2">Step away from the default Arial. I know you’ve been settling for fonts with the emotional depth of a tax form. ;) haha</p>
+        <button class="next" style="--d:2.6">Next →</button>
+      </div>
+      <div class="slide" data-slide="2">
+        <p class="line wide" style="--d:0">Welcome to <b>FONT FLING</b> <span class="pxh beat inl" aria-hidden="true"></span>—where the typefaces are single, shamelessly showing off their curves, and begging you to admire their thick downstrokes.</p>
+        <button class="next" style="--d:1.4">Next →</button>
+      </div>
+      <div class="slide" data-slide="3">
+        <p class="line wide" style="--d:0">I’ve got Hopeless Romantics with dramatic flourishes, toxic bad boys with atrocious kerning, and Comic Sans swearing it’s “strictly ironic now.” <i>(Spoiler: it isn’t.)</i></p>
+        <p class="line wide" style="--d:1.6">Will you find your type, or fall for a commitment-phobe variable font that ghosts you into Opacity: 0%?</p>
+        <p class="line wide" style="--d:3.2">Stop scrolling, drop your standards just enough to download and start flirting.</p>
+        <button class="next" style="--d:4.6">Next →</button>
+      </div>
+      <div class="slide" data-slide="4">
+        <button class="mega" id="go"><span class="pxh beat" aria-hidden="true"></span>LET’S GET<br>FLINGING!<span class="pxh beat late" aria-hidden="true"></span></button>
+        <p class="sub">no fonts were harmed. some were kerned.</p>
+      </div>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="floaties" id="floaties" aria-hidden="true"></div>
+
+  <main class="notebook">
+
+    <header>
+      <h1>Font Fling <span class="pxh beat" style="font-size:3px;margin-left:10px" aria-hidden="true"></span></h1>
+      <p>swipe right on type that makes your heart go <span class="pxh beat" style="font-size:2px;margin:0 2px" aria-hidden="true"></span><br>left is for Papyrus, ★ is for true love</p>
+    </header>
+
+    <div class="folder">
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="dating" role="tab">♡ Font Dating</button>
+      <button class="tab" data-tab="quiz" role="tab">💌 Compat Quiz</button>
+      <button class="tab" data-tab="decor" role="tab">✿ Decor Bits</button>
+    </nav>
+    <div class="sheet">
+
+    <!-- TAB 1 -->
+    <section id="dating" class="panel active">
+      <div class="deck" id="deck"></div>
+      <div class="actions">
+        <button class="round pass" id="pass" aria-label="Pass">✕</button>
+        <button class="round undo" id="undo" aria-label="Start over">↺</button>
+        <button class="round super" id="super" aria-label="Super-like">★</button>
+        <button class="round like" id="like" aria-label="Like">♥</button>
+      </div>
+
+      <div class="shelf">
+        <h2>your situationships <span id="matchCount">0</span></h2>
+        <div class="chips" id="matches"><span class="empty">no matches yet… your standards are either very high or very low ✧</span></div>
+        <label class="tiny">send them a message</label>
+        <input id="dateText" type="text" value="Will you be my favourite font?" maxlength="60" aria-label="Date night text">
+        <div class="date-preview" id="datePreview">Will you be my favourite font?</div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="panel">
+      <div class="paper quizbox" id="quizBody"></div>
+    </section>
+
+    <!-- DECOR -->
+    <section id="decor" class="panel">
+      <label class="tiny c">your canvas <em>(tap inside to move the cursor, then type, delete or edit)</em></label>
+      <textarea id="preview" class="preview" rows="2" spellcheck="false" placeholder="type here, then sprinkle some charms ✦"></textarea>
+
+      <div class="paper">
+        <label class="tiny c">charms <em>(tap to add at your cursor)</em></label>
+        <div class="chips charms c" id="charms"></div>
+      </div>
+
+      <div class="actions row">
+        <button class="soft" id="copy">copy ❐</button>
+        <button class="soft" id="clear">clear ✕</button>
+        <button class="soft gold" id="save">save to scrapbook ♡</button>
+      </div>
+
+      <div class="shelf">
+        <h2>scrapbook <span id="savedCount">0</span></h2>
+        <div id="saved"><span class="empty">nothing pinned yet. commitment issues? ✧</span></div>
+      </div>
+    </section>
+    </div></div>
+
+    <footer>
+      <div class="foot1">made with <span class="pxh beat" style="font-size:2px" aria-hidden="true"></span> by <a class="ig" href="https://www.instagram.com/witty.fig?cnvx=dXE1NmR2ZGN4eXVr&amp;utm_source=qr" target="_blank" rel="noopener">witty.fig</a></div>
+      <div>no fonts were harmed. some were kerned.</div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
